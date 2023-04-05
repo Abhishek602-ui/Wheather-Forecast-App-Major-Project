@@ -1,0 +1,160 @@
+*{
+    margin: 0;padding: 0;
+}
+body{
+    background-image: url("https://images.wallpaperscraft.com/image/single/sea_horizon_art_129961_1280x720.jpg");
+  
+    background-size: contain;
+}
+#wheather{
+    background-color: rgb(87, 113, 243);
+    color: aliceblue;
+    height: 7vh;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 700;
+    font-size: 30px;
+    font-family: cursive;
+    
+}
+.forecast{
+    color: aqua;
+    font-size: 23px;
+    font-weight: 800;
+    color: rgb(68, 255, 0);
+    padding-left: 5px;
+    font-family: cursive;
+}
+main{
+    width: 50%;
+
+}
+footer{
+    background-color: rgba(0, 0, 0, 0.737);
+    color: aliceblue;
+}
+#footer{
+    
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.647);
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding:7px;
+
+}
+
+.containercurrentwheather{
+    display: flex;
+    width: 70%;
+    justify-content:space-evenly;
+    border-color: black;
+    box-sizing: content-box;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.734) 0px 3px 6px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+   padding: 20px;
+   font-size:large;
+   
+   
+   
+}
+.currentwheather{
+    padding: 10px;
+    margin: 5px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 3px 6px 0px, rgba(27, 31, 35, 0.15) 2px 3px 2px 0px;
+    height: 30vh;
+    width: 14vw;
+    
+  
+}
+.defcity{
+    padding: 30px;
+    
+}
+.currentcity{
+    display: flex;
+    background-color: rgba(74, 168, 219, 0.933);
+    height: 5vh;
+    width: 90%;
+    justify-content:space-around;
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.566) 0px 1px 3px 0px, rgba(0, 0, 0, 0.352) 0px 0px 0px 1px;
+    font-family: cursive;
+}
+.cityName{
+   font-family:cursive;
+    
+}
+.currentwheather h5{
+    background-color: rgba(193, 234, 217, 0.607);
+    box-shadow: rgba(0, 0, 0, 0.566) 0px 1px 3px 0px, rgba(0, 0, 0, 0.352) 0px 0px 0px 1px;
+    border-radius: 50px;
+    padding: 2px;
+}
+
+#day7heading{
+    background-color: rgba(35, 235, 212, 0.497);
+    text-align: center;
+    height: 6vh;
+    padding-top: 5px;
+    font-family: cursive;
+}
+#secforecast{
+    color: aqua;
+    font-size: 23px;
+    font-weight: 800;
+    color: rgb(123, 0, 255);
+    padding-left: 5px;
+}
+#conditioncurrentwheather{
+    display: flex;
+    flex-direction: column;
+}
+.Icon124{
+    height: 40px;
+    width: 50px;
+    padding-left: 10px;
+
+}
+
+.cont1{
+    display: flex;
+    flex-direction: column;
+    
+}
+#ConditionIcon{
+  
+}
+#Condition{
+    font-size:25px;
+}
+.temp1{
+    padding-top: 50px;
+    font-size:25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.temp2{
+    padding-top: 50px;
+    font-size:25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.temp3{
+    padding-top: 50px;
+    font-size:25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.heading{
+   font-size: 20px;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   text-shadow: 5px red;
+}
+.Hii{
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    padding-bottom:2.5px;
+    
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wheather App | Wheather Forcast</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+
+  </head>
+
+<body onload = "getWheatherData(DefaultCity)">
+  <header>
+    <h1 id="wheather">Wheather<span class="forecast"> Forecast</span></h1>
+  </header>
+  <center>
+    <main>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Enter The City..." aria-label="Recipient's username"
+          aria-describedby="button-addon2" id="get_Place">
+        <button class="btn btn-success " type="button" id="search_button">Search</button>
+        <p id="showerr"></p>
+      </div>
+    </main>
+  </center>
+  <section>
+    <center>
+      <div class="currentcity">
+        <h5 id="currcity">Place Name</h5>
+        <div class="date" id="currDate">
+          <p>23/01/2001</p>
+        </div>
+        <div class="time" id="currTime">12:22 PM</div>
+      </div>
+    </center>
+  </section>
+  <br>
+  <section>
+    <center>
+      <div class="containercurrentwheather">
+        <div class="currentwheather" id="conditioncurrentwheather">
+          <h5 class="heading">Condition <i class="fa-solid fa-cloud " ></i></h5>
+          <div class="cont1">
+           
+            <div class="para1">
+              <br>
+              <p id="Condition"> </p>
+              
+            </div>
+            <div id="ConditionIcon"></div>
+          </div>
+          </div>
+        <div class="currentwheather">
+          <h5 class="heading">Temperature <i class="fa-solid fa-temperature-full"></i></h5>
+          <div class="temp1"><p> <span id="Temperature"></span>&deg;C</p></div>
+        </div>
+        <div class="currentwheather">
+          <h5 class="heading">Humidity <i class="fa-solid fa-fire-flame-simple"></i></h5>
+          <div class="temp2"><p><span id="Humidity"></span>&percnt;</p></div>
+        </div>
+        <div class="currentwheather">
+          <h5 class="heading">Wind Speed <i class="fa-solid fa-wind"></i></h5>
+          <div class="temp3"><p><span id="WindSpeed"></span> Km/h</p></div>
+        </div>
+      </div>
+    </center>
+  </section><br>
+
+  <h3 id="day7heading">5 Day <span id="secforecast">Forecast</span></h3>
+
+  <section>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Day</th>
+          <th scope="col">Condition</th>
+          <th scope="col">Condition Icon</th>
+          <th scope="col">Temperature</th>
+          <th scope="col">Humidity</th>
+          <th scope="col">Wind Speed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td id ="day1condition">Mark</td>
+          <td id="condition1icon" class="icon11">bdk</td>
+          <td id ="day1temperature">Otto</td>
+          <td id = day1humidity>@mdo</td>
+          <td id = "day1WindSpeed">@345</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td id ="day2condition">Jacob</td>
+          <td id="condition2icon"  class="icon11">bdk</td>
+          <td id="day2temperature">Thornton</td>
+          <td id = "day2humidity">@fat</td>
+          <td id = "day2WindSpeed">@jdkhg</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td id ="day3condition">Jacob</td>
+          <td id="condition3icon"  class="icon11">bdk</td>
+          <td id="day3temperature">Thornton</td>
+          <td id = "day3humidity">@fat</td>
+          <td id = "day3WindSpeed">@jdkhg</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td id ="day4condition">Jacob</td>
+          <td id="condition4icon"  class="icon11">bdk</td>
+          <td id="day4temperature">Thornton</td>
+          <td id = "day4humidity">@fat</td>
+          <td id = "day4WindSpeed">@jdkhg</td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td id ="day5condition">Jacob</td>
+          <td id="condition5icon"  class="icon11">bdk</td>
+          <td id="day5temperature">Thornton</td>
+          <td id = "day5humidity">@fat</td>
+          <td id = "day5WindSpeed">@jdkhg</td>
+        </tr>
+        
+
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    <h3 id="footer">Designed and Developed by Abhishek Porwal... linkedin Acc. -> <a href="https://www.linkedin.com/in/abhishek-porwal-bba9b4230/" target="blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAflBMVEUAe7X///8AcbDi6/MAd7N9rM4Ac7G70eStyN/I2ukAebQAdbI5j79Unsjo8vjM4u7Y6fIfiLy00uWew9sHfrZvqs52qc3T5O+ly+FvpMpopcuMudcUg7qny+Hg7/ZDlMKAtNTw9/u92eljoMiTuNWBttWUwNukw9s5k8K61+jZwmoZAAAEoUlEQVR4nO2dbVvbIBSGgTJUSGjStNtsrX1x69b//weXtNMaDVR30YOePfcXP5RcF7e8JhxAyEeqpqynggV12VRPXuLv30mhnM6ds2Rop4pJz9CXxubOVWKsKf3JcCz4FN8JLcaPhmPFrQCPWDU+GnrBU7BVFP5gWHKsokd02RlOTO58XBA1aQ0LrnW0wxZSVCp3Li6KqkTjcmfiorhGMO5nOnQp6tx5uDC1YDLZBgAAAAAAAAAAAAAAAADAf43VRrUYx3SJ1Ro9b8YjX00WhWK4BmnN3fIprkrez/gFHLmd7FGteMU72GO0UY81p3gAa6tXgqwUrXtdgh1zNhEBZjEoKDd3XLqb6bCgZBNdZb6HDCWPQrR2EzRsWBSifggKSs+iO3051verae7cpUBtI4Ylh4aoRhHDrxyGxKjhFw6G5lvEkMW0xiwjhizijd06Yqg5GNoiLLhlMeILNfTqxKgZtpOaeUiQx5RGRAqRSRG2hRhoiXserbDDDdbTikM/+oiZDQhOORkKU25eVlFuG+DctPem7+d82uATRuzuj3qb7Vxx6UX7OHW3ur19KDRTvwNaa2uZNUAAwEfgsLQdoN+pukjKF6vG1radlnPmiOs6MEKlPub6JszDc0X3I5JycVK01hlRr+Y/d8ur9perSbOYlYU1uc7pePu3NnMVSXn9OAlqTcrd2L9K4G8WqzzxAWkNtSqWm2Aiv5tmCBBIaWhNMbzYemJfk894Uxrq5oxfR0N98EpCQ32uAI/4grY5JjO0JvzR7gUz0pqazNBMIj+/YEGpmMpQlW8XlPInoWIywzfX0QMlXVtMZbh6l6CUNdnAmMjw1zta4YExWZBnKsPNOw3lmqqeJjKMRQMMs6F63Uhk+A/siPrTfIYbovXXfIZyTTNBzWhY0VTTjIZyRVKIOQ1p+pqchhXJkJjTkGbqltVwRtEQsxpOKKppVkOS8SKrIUlYWV7D3wQNMa8hxStUckO/XTZNs9zfvyXxkqAhpjWs1nW3R7NbdVJ3X89/P90ShM6lNPRz87zrcKo8V5AUwYEJDV8flK71uc83n6qWDh6UrmJB1pJkR0cyQz8YCGfPfEcliCRPZjgb7vhjUdaSZM9KKsP7UIsy0c9wBHtWUhkuQmO3ji5oEAz5qQzDr3rTzb/8Yz6c4SY8sKnYrpzdpzEchwe2yCZVKb9/GsPInmEX2El97rkPZngdMfwSeY5gQ8DlDXXMkGDqndlwzN7wG/taSnDhSGbDEQxhCEMYwhCGMIQhDGEIQxjCEIYwhCEMYQhDGMIQhjCEIQxhCEMYwhCGMIQhDGEIQxjCEIYwhCEMYQhDGMKwj7kZBfG3z7druV/hlKMf4V129taHn7sh2CYbO0e4vx8tdo5wbBuhjTzH8Px+AAAAAAAAAAAAAAAAAAAAAAAA4ESdOwMXphYl46vfRXcqsWiy3LlLhmsEwVGLOVGVoDjlPB+2kILiZN58mH1rKBn3Nd3p562hF1zrqRX+YDh8DQMDrOouPekMB67S4IAWh1tdDobSl+yK0ZrSy5OhlJNCOT4FqZ0q9n/NxFP0bdWUXOaoddmcbjr5A5XhWJeQSJXvAAAAAElFTkSuQmCC" alt="hello" class="Hii"></a>_for Github -> <a href="https://github.com/Abhishek602-ui?tab=repositories" target="_blank"><img src="data:image/png;base64,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" alt="" class="Hii"></a></h3>
+
+    
+
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+    crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
